@@ -11,8 +11,11 @@ import styles from "./App.module.scss";
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getUsers());
-  }, []);
+    if (!localStorage.getItem("persist:state")) {
+      dispatch(getUsers());
+    }
+    return localStorage.removeItem("persist:state");
+  }, [dispatch]);
 
   return (
     <div className={styles.wrapper}>
