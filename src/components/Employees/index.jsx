@@ -15,7 +15,7 @@ const Employees = () => {
     <div className={styles.wrapper}>
       <h1>Employees</h1>
       <div className={styles.list}>
-        {user.map((item) => (
+        {(user || []).map((item) => (
           <div key={nanoid()}>
             <h3>{item.letters}</h3>
             {item.users.length > 0 ? (
