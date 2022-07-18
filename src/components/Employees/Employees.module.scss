@@ -1,0 +1,19 @@
+.wrapper {
+  width: 100%;
+  border-right: 1px solid #000;
+  text-align: center;
+  input:hover {
+    cursor: pointer;
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: center;
+
+    .item {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}

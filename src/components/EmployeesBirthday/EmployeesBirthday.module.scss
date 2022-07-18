@@ -1,0 +1,14 @@
+.wrapper {
+  width: 100%;
+  text-align: center;
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .item {
+      width: 50px;
+      text-align: center;
+    }
+  }
+}
